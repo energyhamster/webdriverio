@@ -20,6 +20,7 @@
     "wdio-chromedriver-service": "^7.3.2"
   },
   "dependencies": {
-    "chai": "^4.3.6"
+    "chai": "^4.3.6",
+    "chai-arrays": "^2.2.0"
   }
 }

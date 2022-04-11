@@ -21,7 +21,9 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        //'./test/specs/**/*.js'
+        //'./test/specs/eCommerseE2E.js'
+        './test/specs/poTest.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -97,7 +99,7 @@ exports.config = {
     baseUrl: 'http://localhost',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 15000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response

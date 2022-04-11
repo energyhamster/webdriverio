@@ -2,19 +2,19 @@ const expectChai = require ('chai').expect
 
 describe('Ecommerce Apllication', () => {
     it('Login page title', async () => {
-        const search = $("//input[@type='submit']");
-        const input = $("input[name='q']");
+        const username = $("#username");
+        const password = $("#password");
+        const signIn = $("#signInBtn");
         
-        
-
-        await browser.url('https://google.com.ua');
-        await expect(browser).toHaveTitle('Google');
-        await input.setValue("car");
-        await search.click();
-        await browser.pause(10000);
-        await expect(browser).toHaveTitleContaining('car');
-        await expect(browser).toHaveUrlContaining("car");
-        const resultText = await $("#result-stats").getText();
-        await expectChai(resultText).to.contain("Результатов");
+        await browser.url('https://rahulshettyacademy.com/loginpagePractise/');
+        await browser.maximizeWindow();
+        await expect(browser).toHaveTitleContaining('LoginPage Practise');
+        await username.setValue("rahulshettyacademyfff");
+        await password.setValue("learningfff");
+        await signIn.click();
+        await browser.waitUntil(async () => (await signIn.getAttribute("value")) === "Sign In", {
+            timeout: 5000,
+            timeoutMsg: "Error message is not showing up"
+        });
     });
 });
